@@ -1,3 +1,4 @@
+import LogoutButton from '@/components/features/auth/logout-button';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 
@@ -11,8 +12,13 @@ export default async function DashboardPage() {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-semibold">Welcome to PropVault</h1>
-      <p className="text-slate-500 mt-1">{user.email}</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold">Welcome to PropVault</h1>
+          <p className="text-slate-500 mt-1">{user.email}</p>
+        </div>
+        <LogoutButton />
+      </div>
     </div>
   );
 }
