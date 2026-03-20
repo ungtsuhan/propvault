@@ -488,7 +488,7 @@ Select the following options:
 Add required components for the project:
 
 ```bash
-pnpm dlx shadcn@latest add card input label
+pnpm dlx shadcn@latest add card input label sidebar
 ```
 
 Each component is generated as a .tsx file inside:
