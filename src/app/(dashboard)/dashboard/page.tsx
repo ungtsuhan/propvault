@@ -1,4 +1,3 @@
-import LogoutButton from '@/components/features/auth/logout-button';
 import { prisma } from '@/lib/prisma';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
@@ -28,7 +27,6 @@ export default async function DashboardPage() {
           <p className="text-slate-500 mt-1">{user.email}</p>
           <p className="text-slate-500 mt-1">Database status: {dbStatus}</p>
         </div>
-        <LogoutButton />
       </div>
     </div>
   );

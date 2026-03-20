@@ -1,7 +1,8 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { SidebarMenuButton } from '@/components/ui/sidebar';
 import { createClient } from '@/lib/supabase/client';
+import { LogOut } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function LogoutButton() {
@@ -14,8 +15,9 @@ export default function LogoutButton() {
   }
 
   return (
-    <Button variant="outline" onClick={handleLogout}>
-      Sign out
-    </Button>
+    <SidebarMenuButton onClick={handleLogout}>
+      <LogOut />
+      <span className="uppercase">Sign out</span>
+    </SidebarMenuButton>
   );
 }
