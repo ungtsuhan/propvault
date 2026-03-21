@@ -25,7 +25,7 @@ export default function AppSideBar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <h1>PropVault</h1>
+        <span className="uppercase">PropVault</span>
       </SidebarHeader>
 
       <SidebarContent>
